@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Head } from '@inertiajs/react';
 
-function Home() {
-  return (
-    <div>
-      This is Home
-    </div>
-  )
+export default function Home() {
+    return (
+        <div>
+            <Head title="Home" />
+            <h1>Welcome to the Home Page!</h1>
+        </div>
+    );
 }
-
-export default Home
