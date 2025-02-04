@@ -5,7 +5,7 @@ function Layout({children}) {
       <header>
         <nav className="text-white font-2xl font-bold">
             <Link href="/">Home</Link>
-            <Link href="/create">Create</Link>
+            <Link href="/posts/create">Create</Link>
         </nav>
       </header>
       <main>{children}</main>

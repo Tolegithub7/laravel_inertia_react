@@ -20,12 +20,11 @@ export default function Home({posts}) {
                         <Link 
                             key={link.label}
                             href={link.url}
+                            dangerouslySetInnerHTML={{__html: link.label}}
                             className={`p-1 mx-4 ${
-                                link.active? "text-blue-500 font-bold" : "text-gray-500"
+                                link.active? "text-blue-500 font-bold" : "text-gray-900"
                             }`}
-                        >
-                            {link.label}
-                        </Link>
+                        />
                     ) : (
                         <span 
                             key={link.label}
