@@ -1,22 +1,28 @@
-import { Link, usePage } from "@inertiajs/react";
+import { Head, Link, usePage } from "@inertiajs/react";
 import { useRoute } from "../../../vendor/tightenco/ziggy";
 import { useState } from "react";
 export default function Home({posts}) {
     const route = useRoute();
     const { flash } = usePage().props;
+    const { component } = usePage();
 
     const [flashMsg, setFlashMsg] = useState(flash.message);
     setTimeout(() => {
         setFlashMsg(null);
-    }, 200);
+    }, 1000);
 
     console.log(usePage());
     return (
         <>
+            {/* <Head><title>Home</title></Head> */}
+            <Head title={component} />
             <p className="title">Home</p>
             <h1 className="text-center">Welcome !</h1>
             {flashMsg && <div className="absolute top-24 right-6 bg-rose-600 p-2 rounded-md shadow-lg text-sm text-white">
                 {flashMsg}
+            </div>}
+            {flash.success && <div className="absolute top-24 right-6 bg-green-600 p-2 rounded-md shadow-lg text-sm text-white">
+                {flash.success}
             </div>}
             {posts.data.map(post => (//add .data for paginate in place of get
                 <div key={post.id} className="p-4 border-b">

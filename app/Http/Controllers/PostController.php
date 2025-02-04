@@ -50,7 +50,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return inertia('Edit', ['post' => $post]);
     }
 
     /**
@@ -58,9 +58,16 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        sleep(2);
+        $fields = $request->validate([
+            'body' => 'required || min:5',
+        ]);
+        $post->update($fields);
+        return redirect('/')->with(
+            'success', //key
+            'Post Updated Successfully' //value 
+        );
     }
-
     /**
      * Remove the specified resource from storage.
      */
