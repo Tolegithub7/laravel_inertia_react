@@ -10,7 +10,6 @@
     @vite('resources/css/app.css')
   </head>
   <body>
-    @inertia {{-- <div id="app"></div> --}}
-    <h1 class="text-3xl font-bold underline">hell</h1>
+    @inertia {{-- <div id="app"></div> --}} 
   </body>
 </html>

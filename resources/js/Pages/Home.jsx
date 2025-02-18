@@ -58,3 +58,7 @@ export default function Home({posts}) {
         </>
     );
 }
+
+
+// Home.layout = page => <Layout children={page} />
+// export default Home;

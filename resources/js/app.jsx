@@ -1,8 +1,8 @@
 import './bootstrap';
-import '../css/app.css';
+import '../css/app.css'; //after installing the tailwind styles
 import { createInertiaApp } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
-import Layout from '../js/Layouts/Layout';
+import Layout from '@/Layouts/Layout';
 
 createInertiaApp({
   title: (title) => 

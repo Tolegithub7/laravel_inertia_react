@@ -30,6 +30,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $fields = $request->validate([
             'body' => 'required || min:5',
         ]);
