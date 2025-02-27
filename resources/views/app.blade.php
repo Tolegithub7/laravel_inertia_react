@@ -6,7 +6,7 @@
     @viteReactRefresh
     @vite('resources/js/app.jsx')
     @inertiaHead
-    @routes
+    @routes {{--  This is to use route from ziggy  --}}
     @vite('resources/css/app.css')
   </head>
   <body>

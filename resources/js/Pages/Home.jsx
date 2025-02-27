@@ -60,5 +60,5 @@ export default function Home({posts}) {
 }
 
 
-// Home.layout = page => <Layout children={page} />
+// Home.layout = page => <Layout children={page} /> // you can say on different pages guestLayout or AuthenticatedLayout
 // export default Home;
